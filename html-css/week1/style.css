@@ -1,0 +1,225 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Calibri, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    margin: 5% 15%;
+    padding: 2%;
+}
+
+body>section.two-sides>section.left-side {
+    background-color: rgb(40, 60, 80);
+    padding: 2%;
+    border: 1px solid black;
+}
+
+body>section.two-sides>section.right-side {
+    background-color: rgba(40, 60, 80, 0.105);
+    border: 1px solid black;
+    padding: 2%;
+}
+
+/* body>section.two-sides>section.left-side -
+selects section.left-side, whose parent is section.two-sides, 
+whose parent is body.
+Had to use body selector as 
+section.left-side and section.two-sides is used for styling at other places 
+Same logic is used for body>section.two-sides>section.right-side*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.references p,
+.skills ul>li,
+.resources ul>li {
+    text-transform: uppercase;
+}
+
+/* 
+.references p
+    - Selects all p elements inside the section .references
+
+.skills ul>li 
+    - Selects all <li> elements where the parent is a <ul> element in the class (.skills)*/
+
+h1,
+h4 {
+    color: white;
+}
+
+h3,
+.references p {
+    color: rgb(255, 250, 160);
+}
+
+.header,
+.hyf-platform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_pic {
+    width: 80%;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+h1,
+h3 {
+    margin: 3%;
+    font-size: 1.2rem;
+}
+
+h3 {
+    text-decoration: underline;
+    text-decoration-color: rgb(243, 152, 116);
+    text-underline-offset: 10px;
+    /* distance of underline from its initial position.*/
+    text-align: center;
+}
+
+.contact-info,
+.skills,
+.references,
+.learning-strategies {
+    margin: 10% 5%;
+    overflow-wrap: break-word;
+}
+
+
+
+.reference-one,
+.resources {
+    margin: 5% 0%;
+}
+
+.icon-data {
+    display: flex;
+    flex-flow: row wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+    justify-content: space-between;
+}
+
+.icon-data-li {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.fa-solid,
+.fa-brands {
+    color: rgba(231, 232, 232, 0.5);
+    color: rgb(37, 117, 198);
+}
+
+.fa-location-dot {
+    width: 1.02rem;
+}
+
+li {
+    list-style-type: none;
+    /* To remove bullets from all li*/
+    color: rgba(231, 232, 232, 0.5);
+    width: 80%;
+    margin: 2% 0%;
+
+}
+
+h4 {
+    margin: 3% 0%;
+}
+
+.references p {
+    font-size: .8rem;
+}
+
+.experience {
+    margin: 5% 0%;
+}
+
+
+h2 {
+    font-size: 1.3rem;
+    padding: 2% 0%;
+    color: rgb(40, 60, 80);
+}
+
+p {
+    padding: 2% 0%;
+}
+
+
+h5 {
+    color: rgb(52, 99, 147)
+}
+
+h6 {
+    /*color: rgb(52, 99, 147);
+    color: rgb(49, 116, 183);*/
+    color: rgb(37, 117, 198);
+}
+
+.learning-strategies li {
+    text-transform: capitalize;
+}
+
+.strategies-resources {
+    margin: 5%;
+}
+
+.slack-img {
+    width: 50%;
+    max-height: 37%;
+    padding: 5% 20%;
+}
+
+.github-img {
+    width: 50%;
+    min-height: 37%;
+}
+
+@media only screen and (min-width: 992px) {
+    /* For desktop: */
+
+    h1,
+    h3 {
+        margin: 3%;
+        font-size: 1rem;
+    }
+
+    .two-sides {
+        display: flex;
+        flex-flow: row wrap;
+        /* Shorthand property for flex-direction and flex-wrap */
+    }
+
+    .right-side {
+        width: 55%;
+        flex-grow: 2;
+        /* To cover the remaining space in the container*/
+    }
+
+    .left-side {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul.icon-data li {
+        width: 93%;
+    }
+
+    .fa-location-dot {
+        width: 9%;
+    }
+
+
+
+}
