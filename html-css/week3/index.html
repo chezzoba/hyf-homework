@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS - Week 3 - Homework</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class = "header">
+        <div class = "logo">
+          <h2>Beauty
+          </h2>  
+        </div> <!-- End of div class logo -->         
+        
+        <nav class="nav-bar">
+            <ul class="navigation">
+              <li><a href="#" class = "active">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>                     
+            </ul>
+        </nav> <!-- End of nav --> 
+    </header> <!--End of header -->
+
+    <main>
+
+        <div class="sign-up-yourcustomtailor">
+            <h2>Sign up to yourcustomtailor.com</h2>
+            <p>We can't wait to help you improve your life-style and gain the attention from people around
+                you!
+            </p>
+            <p>Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy
+                picking the best offers that match your preferences and style. Every week we will send you a
+                hand-picked selection - we just need to know a few details about your first...
+            </p>
+        </div> 
+        <!--End of div for sign-up-yourcustomtailor -->
+        
+        <div class="progress-status-details">
+            <h3>Step 1/4 - tell us who you are? </h3>            
+            
+            <div class="container">
+                <div class="progress">
+                    <h2>Progress</h2>            
+                    <div class="progress-bar">
+                        <div class="page1"><span>5%</span></div>
+                    </div> <!--End of div progress-bar-->         
+                </div> <!--End of div skills-->  
+            </div> <!--End of div container-->  
+
+            <p>Nice to meet you. Let's spend a minute to get to know each other? 
+                Please enter the following:
+            </p>                  
+        </div> 
+        <!--End of div progress-status-details-->   
+
+        <form action="./index2.html" method="get" class="sign-up-form">
+            <div class="first-name">
+                <label for="first-name">first name</label>
+                <input type="text" name="name" id="first-name" placeholder="First name" required>
+            </div>
+    
+            <div class="last-name">
+                <label for="last-name">last name</label>
+                <input type="text" name="name" id="last-name" placeholder="Last name" required>
+            </div>
+
+            <div class="select-country">
+                <label for="country-select">country:</label>
+
+                <select id="country-select" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="denmark">Denmark</option>
+                    <option value="sweden">Sweden</option>
+                    <option value="norway">Norway</option>
+                    <option value="finland">Finland</option>
+                    <option value="germany">Germany</option>
+                    <option value="france">France</option>
+                </select>  
+            </div>
+            <!--End of div select-country-->
+
+            <div class="street-address">
+                <label for="street-address">street address</label>
+                <input type="text" name="street-address" id="street-address" placeholder="Street name" required>
+                    
+                <label for="post-code">post code</label>
+                <input 
+                    type="text" 
+                    name="post-code" 
+                    id="post-code" 
+                    placeholder="Postal Code" 
+                    pattern="[0-9]{4}" 
+                    required
+                >
+            </div>
+            <!--End of div street-address-->
+
+            <div class="profile-description">
+                
+                <label for="profile-description">
+                    profile description 
+                </label>
+                        
+                <p>Please provide a short description of yourself 
+                    to be displayed on social media community
+                </p>               
+                
+                <textarea 
+                    id="profile-description" 
+                    name="profile description"
+                    rows="5" 
+                    cols="33"
+                    maxlength="500"></textarea>
+                <!--Specially indented </textarea> in the above line 
+                    to avoid white spsace in the actual text area-->  
+            </div>
+            <!--End of div profile description-->
+
+            <div class="shipping-address">
+                <p>Use the same address for billing and shipping? 
+                    Uncheck below to fill out a separate shipping address.
+                </p>
+                <label for="shipping-address">
+                    shipping address 
+                </label>
+                <input 
+                    type="checkbox" 
+                    id="shipping-address" 
+                    name="shipping-address" 
+                    required
+                    checked
+                >                          
+            </div>
+            <!--End of div shipping address-->
+
+            <div class="buttons">                
+                <a href="./index2.html">Next step</a>
+                <button class="submit" type="submit">Submit</button>      
+            </div>  
+            <!--End of div for buttons--> 
+        </form>          
+    </main> 
+    <script src="./script.js"></script>   
+</body>
+
+</html>
+

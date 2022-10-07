@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Step4/4 Signup Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="logo">
+                <h2>Beauty
+                </h2>
+            </div> <!-- End of div class logo -->
+
+            <nav class="nav-bar">
+                <ul class="navigation">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav> <!-- End of nav -->
+        </header>
+        <!--End of header -->
+
+        <main>
+
+            <div class="sign-up-yourcustomtailor">
+                <h2>sign up to yourcustomtailor.com</h2>
+            </div>
+            <!--End of div for sign-up-yourcustomtailor -->
+
+            <div class="progress-status-details">
+                <h3>Step 4/4 - payment </h3>
+
+                <div class="container">
+                    <div class="progress">
+                        <h2>Progress</h2>
+                        <div class="progress-bar">
+                            <div class="page4"><span>75%</span></div>
+                        </div>
+                        <!--End of div progress-bar-->
+                    </div>
+                    <!--End of div skills-->
+                </div>
+                <!--End of div container-->
+            </div>
+
+            <form action="./index5.html" method="get" class="sign-up-form">
+                <div>
+                    <fieldset class="payment-data">
+                        <legend>Please fill in your payment data</legend>
+
+                        <div class="name-on-card">
+                            <label for="name-on-card">name on card</label>
+                            <input type="text" name="name-on-card" id="name-on-card" required>
+                        </div>
+
+                        <div class="card-type">
+                            <label for="card-type">card type</label>
+
+                            <select id="card-type" required>
+                                <option value="">--Please choose an option--</option>
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">Mastercard</option>
+                            </select>
+                        </div>
+
+                        <div class="card-number">
+                            <label for="card-number">card number</label>
+                            <input type="text" name="card-number" id="card-number" placeholder="1234 1234 1234 1234"
+                                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required>
+                        </div>
+
+                        <div class="first-name">
+                            <label for="first-name">first name</label>
+                            <input type="text" name="name" id="first-name" placeholder="First name" required>
+                        </div>
+
+                        <div class="month">
+                            <label for="expiry-month">Expiry month</label>
+                            <input type="month" id="expiry-month" name="expiry-month" min="2022-01" max="2030-12"
+                                required>
+
+                            <label for="expiry-year">Expiry year</label>
+                            <input type="number" id="expiry-year" name="expiry-year" min="2022" max="2030" required>
+                        </div>
+
+                        <div class="card-ccv-number">
+                            <label for="card-ccv-number">ccv</label>
+                            <input type="text" name="card-ccv-number" id="card-ccv-number" placeholder="123"
+                                pattern="[0-9]{3}" required>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="buttons">
+                    <a href="index3.html">Previous</a>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </main>  
+        <script src="./script.js"></script>      
+    </body>
+</html>

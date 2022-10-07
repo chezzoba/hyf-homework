@@ -1,0 +1,646 @@
+:root {
+  --cherryred: rgb(210, 4, 45);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  border: 1px solid black;
+}
+
+::selection {
+  color: red;
+  background: rgba(255, 179, 0, 0.737);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(orange, yellow);
+}
+
+.logo {
+  padding: 1.2rem 0.5rem;
+  border: 0.25rem solid red;
+  border-radius: 50%;
+}
+
+.logo > h2 {
+  font-size: 1.3rem;
+  font: black;
+}
+
+.nav-bar {
+  width: 60%;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  display: flex; /* To display horizontal nav bar */
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0rem; /* Add space to top and bottom of nav bar */
+}
+
+li a {
+  text-decoration: none; /* Remove underline from the nav-bar */
+  padding-right: 0.8rem;
+  position: relative;
+  transition: all ease-in-out 250ms;
+  /* Same as transition for underline */
+}
+
+li a::after {
+  /*To create the underline effect on nav-bar */
+  content: "";
+  position: absolute;
+  display: block;
+  height: 0.5rem;
+  width: 0%; /* So that underline is not visible now*/
+  background-color: var(--cherryred);
+  bottom: -1rem; /* To add spacce between nav-bar and underline*/
+  transition: all ease-in-out 250ms;
+}
+
+li a:hover::after {
+  width: 90%;
+}
+
+li a:hover {
+  color: var(--cherryred);
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  /* Shorthand property for flex-direction and flex-wrap */
+  gap: 1rem;
+  margin: 1rem 0rem;
+  /* To increase the space between elements in this section*/
+}
+
+.sign-up-yourcustomtailor > p {
+  padding: 0.5rem 0rem;
+}
+
+.container {
+  /*Container for progress bar*/
+  width: 100%;
+  max-width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress h2 {
+  /* The word progress*/
+  color: black;
+  position: relative;
+  bottom: 1.2rem;
+}
+
+.progress-bar {
+  background-color: black;
+  height: 0.625rem;
+  border-radius: 0.3125rem;
+  max-width: 100%;
+}
+
+.progress-bar div {
+  /* To give color effect on bar */
+  height: 0.625rem;
+  border-radius: 0.3125rem;
+  width: 0%; /*Initial width */
+  background-color: red;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  max-width: 100%;
+}
+
+.progress-bar div span {
+  /* The circle which specifies percentage */
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: aliceblue;
+  position: absolute;
+  bottom: -0.6em; /* - to place it correctly*/
+  right: -0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.0625rem solid black;
+}
+
+.page1 {
+  animation: page1 1s linear forwards;
+}
+
+@keyframes page1 {
+  100% {
+    width: 5%;
+  }
+}
+
+.page2 {
+  animation: page2 1s linear forwards;
+}
+
+@keyframes page2 {
+  0% {
+    width: 5%;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
+.page3 {
+  animation: page3 1s linear forwards;
+}
+
+@keyframes page3 {
+  0% {
+    width: 25%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.page4 {
+  animation: page4 1s linear forwards;
+}
+
+@keyframes page4 {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+.page5 {
+  animation: page5 1s linear forwards;
+}
+
+@keyframes page5 {
+  0% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.sign-up-form {
+  /* Actual form */
+  margin: 1.5rem;
+  border: 1px double red;
+  display: flex;
+  position: relative;
+}
+
+.street-address,
+.profile-description,
+.shipping-address,
+.buttons,
+.email,
+.phone,
+.password,
+.container-items-interested {
+  display: flex;
+}
+
+.radio-buttons-newsletter {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0rem;
+}
+
+.radio-buttons-newsletter > div {
+  width: 30%;
+  display: flex;
+}
+
+.container-items-interested {
+  flex-flow: row wrap;
+  max-width: 15rem;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.container-items-interested > div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+img {
+  width: 100%;
+}
+
+.fieldset-images {
+  display: flex;
+  flex-flow: row wrap;
+}
+.choose-image {
+  display: flex;
+  flex-direction: column-reverse;
+  /* To place checkbox, below the image */
+  width: 25%;
+  max-width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-image > label {
+  /*To align image to the center of the div*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* To hover image */
+.overlay {
+  position: absolute;
+  top: 0.3rem;
+  bottom: 0;
+  left: 0.5rem;
+  right: 0;
+  height: 100%;
+  width: 90%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.choose-image:hover .overlay {
+  opacity: 1;
+}
+
+label {
+  text-transform: capitalize;
+}
+
+.buttons > a,
+.buttons > button {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  border-radius: 0.3125rem;
+}
+
+.buttons > a:hover {
+  background-color: rgb(15, 82, 186);
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.payment-data,
+.payment-data > div {
+  margin: 0.5rem 0rem;
+}
+
+/* Mobile devices: 320px — 480px  */
+@media only screen and (max-width: 480px) {
+  * {
+    font-size: 0.95rem;
+  }
+  body {
+    margin: 1rem 2rem;
+  }
+
+  .logo {
+    padding: 1rem 3.5rem;
+    border: 0.25rem solid red;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .logo > h2 {
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+  }
+
+  .navigation {
+    flex-flow: column wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+    gap: 10px;
+    align-items: flex-end;
+    margin: 0rem 1.5rem;
+  }
+
+  li a::after {
+    bottom: -0.5rem;
+  }
+
+  .sign-up-form,
+  .sign-up-yourcustomtailor {
+    flex-flow: column wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+    gap: 0.5rem;
+    padding: 0.5rem 0rem;
+  }
+
+  .sign-up-yourcustomtailor {
+    width: 70%;
+    margin: 0rem 1.5rem;
+  }
+
+  .progress-status-details {
+    margin: 0rem 1.5rem;
+  }
+
+  .sign-up-form {
+    margin: 0rem 1.5rem;
+  }
+
+  .progress-bar {
+    width: 22rem;
+  }
+
+  label,
+  input {
+    padding: 0.2rem 0rem;
+  }
+
+  .first-name,
+  .last-name,
+  .select-country,
+  .email,
+  .phone,
+  .password,
+  .name-on-card,
+  .card-type,
+  .card-number {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+  }
+
+  .street-address {
+    gap: 0.5rem;
+    flex-flow: row wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+  }
+
+  .street-address :nth-child(1) {
+    width: 40%;
+  }
+
+  .street-address :nth-child(2) {
+    width: 95%;
+  }
+
+  .street-address :nth-child(3) {
+    width: 30%;
+  }
+
+  .street-address :nth-child(4) {
+    width: 30%;
+  }
+
+  .profile-description,
+  .shipping-address {
+    gap: 0.5rem;
+    flex-flow: row wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+  }
+
+  .shipping-address :nth-child(2) {
+    width: 50%;
+  }
+
+  /* Step 2/4 Form */
+
+  .email :nth-child(2) {
+    width: 80%;
+  }
+
+  .phone :nth-child(2) {
+    width: 80%;
+  }
+
+  .password {
+    flex-flow: row wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+  }
+
+  .password :nth-child(2) {
+    width: 50%;
+  }
+
+  .password-popup-message {
+    height: 2.5rem;
+    width: 100%;
+    color: red;
+    font-style: italic;
+    border: 1px solid black;
+  }
+
+  .radio-buttons-newsletter > div {
+    flex-direction: column;
+  }
+
+  .choose-image {
+    width: 45%;
+    max-width: 45%;
+    justify-content: space-between;
+    margin: 0.5rem;
+  }
+
+  /* Step 4/4 Form */
+
+  .month :nth-child(3) {
+    width: 60%;
+  }
+}
+
+/* iPads, Tablets: 481px — 768px */
+/* Small screens, laptops: 769px — 1024px  (and above) */
+
+@media only screen and (min-width: 481px) {
+  * {
+    font-size: 1rem;
+  }
+  body {
+    margin: 2rem 18%;
+    /* In the begining margin left-right was set to 15 rem*/
+  }
+  .navigation {
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+  .sign-up-yourcustomtailor {
+    width: 70%;
+    margin: 1rem 5rem;
+  }
+
+  .progress-status-details {
+    margin: 1rem 5rem;
+  }
+
+  .sign-up-form {
+    margin: 1rem 5rem;
+    flex-flow: row wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .progress {
+    width: 100%;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+
+  label,
+  input {
+    padding: 0.2rem 0.5rem;
+  }
+
+  .first-name,
+  .last-name,
+  .select-country,
+  .email,
+  .phone,
+  .password {
+    display: flex;
+    max-width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .street-address {
+    gap: 1rem;
+    flex-flow: row wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+  }
+
+  .street-address :nth-child(1) {
+    width: 40%;
+  }
+
+  .street-address :nth-child(2) {
+    width: 57%;
+  }
+
+  .street-address {
+    gap: 1rem;
+    flex-flow: row wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+  }
+
+  .street-address :nth-child(1) {
+    width: 40%;
+  }
+
+  .street-address :nth-child(2) {
+    width: 57.25%;
+  }
+
+  .street-address :nth-child(3) {
+    width: 30%;
+  }
+
+  .street-address :nth-child(4) {
+    width: 30%;
+  }
+
+  .profile-description {
+    gap: 0.5rem;
+    flex-flow: row wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+  }
+
+  .profile-description :nth-child(1) {
+    width: 40%;
+  }
+
+  .profile-description :nth-child(2) {
+    font-style: italic;
+  }
+
+  .shipping-address {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.0625rem;
+    justify-content: flex-start;
+  }
+
+  .shipping-address :nth-child(1) {
+    width: 100%;
+  }
+
+  .shipping-address :nth-child(2),
+  .shipping-address :nth-child(3) {
+    width: 40%;
+  }
+
+  /* Step 2/4 Form */
+
+  .email :nth-child(1) {
+    margin-right: 0.5rem;
+  }
+
+  .phone :nth-child(1) {
+    margin-right: 0.5rem;
+  }
+
+  .password {
+    flex-flow: row wrap;
+    /* Shorthand property for flex-direction and flex-wrap */
+  }
+
+  .password :nth-child(2) {
+    width: 50%;
+    height: 2.5rem;
+  }
+
+  .password-popup-message {
+    position: relative;
+    bottom: 3rem;
+    right: 4.7rem;
+    height: 5rem;
+    width: 21%;
+    color: red;
+    font-style: italic;
+    border: 1px solid black;
+  }
+
+  .radio-buttons-newsletter > div {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  img {
+    margin: 10% 0%;
+  }
+
+  .buttons {
+    padding: 1rem;
+  }
+}
