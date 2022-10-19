@@ -1,0 +1,10 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.container-body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
