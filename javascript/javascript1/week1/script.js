@@ -64,4 +64,27 @@
         console.log(`${(detailsOfHouse[indexNumber].name)} is paying exact amount for the house`)
     }
 
+// Ez Namey (Startup name generator)
+
+    //Create two arrays called firstWords, secondWords. 
+
+    let firstWords = ["First", "Best", "Think", "Synergy", "Easy", "Rainbow", "Excel", "Sun", "Future", "Euro"];
+    let secondWords = ["Corporation", "Enterprise", "Consultancy", "Company", "Venture", "Services", "Solutions", "Talent", "Street", "Path"];
+
+    //To get a random number from Array firstWords
+    let randomFirstWord = [Math.floor(Math.random()*firstWords.length)];
+    
+    //This will select a random name from Array firstWords
+    console.log(firstWords[randomFirstWord]);
+
+    //To get a random number from Array secondWords
+    let randomSecondWord = [Math.floor(Math.random()*firstWords.length)];
+    
+    //This will select a random name from Array secondWords
+    console.log(secondWords[randomSecondWord]);
+
+    //Create a variable called startupName that will contain the created startup name.
+    //Concatenate first word and second word
+    let startupName = console.log(`${(firstWords[randomFirstWord])} ${(secondWords[randomSecondWord])}`)
+
 
