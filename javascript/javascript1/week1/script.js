@@ -106,6 +106,7 @@
 
     //Create a variable called startupName that will contain the created startup name.
     //Concatenate first word and second word
-    const startupName = console.log(`${(firstWords[randomFirstNumber])} ${(secondWords[randomSecondNumber])}`)
-
-
+    const startupName = (`${(firstWords[randomFirstNumber])} ${(secondWords[randomSecondNumber])}`)
+    
+    console.log(`The startup: "${startupName}" contains ${(startupName.length)} characters `)
+    
