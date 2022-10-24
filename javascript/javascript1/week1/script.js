@@ -1,5 +1,7 @@
 // Age-ify (A future age calculator)
-    let yearOfBirth = 1985;
+    const yearOfBirth = 1985;
+
+    //used let yearFuture as it might change
     let yearFuture = 2025;
 
     // Used const as formula is fixed.
@@ -9,15 +11,19 @@
 
 // Goodboy-Oldboy (A dog age calculator)
 
-    let dogYearOfBirth = 2010;
+    const dogYearOfBirth = 2010;
+
+    // used let dogYearFuture as it might change
     let dogYearFuture = 2022;
-    let dogYear = dogYearFuture - dogYearOfBirth;
+
+    // Used const as formula is fixed.
+    const dogYear = dogYearFuture - dogYearOfBirth;
 
     // shouldShowResultInDogYears - true - will show dog age in dog years.
     // shouldShowResultInDogYears - false - will show dog age in human years.
  
     let shouldShowResultInDogYears = true;
-    let dogAgeInDogYear = dogYear * 7;
+    const dogAgeInDogYear = dogYear * 7;
 
     if(shouldShowResultInDogYears === true){    
         console.log(`Your dog will be ${dogAgeInDogYear} dog years old in ${dogYearFuture}`)
@@ -72,19 +78,19 @@
     let secondWords = ["Corporation", "Enterprise", "Consultancy", "Company", "Venture", "Services", "Solutions", "Talent", "Street", "Path"];
 
     //To get a random number from Array firstWords
-    let randomFirstWord = [Math.floor(Math.random()*firstWords.length)];
+    const randomFirstNumber = [Math.floor(Math.random()*firstWords.length)];
     
     //This will select a random name from Array firstWords
-    console.log(firstWords[randomFirstWord]);
+    console.log(firstWords[randomFirstNumber]);
 
     //To get a random number from Array secondWords
-    let randomSecondWord = [Math.floor(Math.random()*firstWords.length)];
+    const randomSecondNumber = [Math.floor(Math.random()*firstWords.length)];
     
     //This will select a random name from Array secondWords
-    console.log(secondWords[randomSecondWord]);
+    console.log(secondWords[randomSecondNumber]);
 
     //Create a variable called startupName that will contain the created startup name.
     //Concatenate first word and second word
-    let startupName = console.log(`${(firstWords[randomFirstWord])} ${(secondWords[randomSecondWord])}`)
+    let startupName = console.log(`${(firstWords[randomFirstNumber])} ${(secondWords[randomSecondNumber])}`)
 
 
