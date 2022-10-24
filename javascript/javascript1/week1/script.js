@@ -22,7 +22,7 @@
     // shouldShowResultInDogYears - true - will show dog age in dog years.
     // shouldShowResultInDogYears - false - will show dog age in human years.
  
-    let shouldShowResultInDogYears = true;
+    const shouldShowResultInDogYears = true;
     const dogAgeInDogYear = dogYear * 7;
 
     if(shouldShowResultInDogYears === true){    
@@ -91,6 +91,6 @@
 
     //Create a variable called startupName that will contain the created startup name.
     //Concatenate first word and second word
-    let startupName = console.log(`${(firstWords[randomFirstNumber])} ${(secondWords[randomSecondNumber])}`)
+    const startupName = console.log(`${(firstWords[randomFirstNumber])} ${(secondWords[randomSecondNumber])}`)
 
 
