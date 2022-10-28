@@ -173,3 +173,72 @@ addStudentToClass("Queen Margrethe")
 //Added Queen Margrethe to the class, even if number of students in class is already 6
 
 console.log(class07Students);
+
+// Exercise from last class
+
+// Count By Sound
+const myFriends = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce']
+
+let count = 0;
+
+// Loop through Array
+for (let i = 0; i < myFriends.length; i++) {
+    //if function inside for loop
+    if (myFriends[i].includes("a")) {
+        count++;
+        console.log(count)
+    } else {
+        console.log(myFriends[i])
+    }
+}
+
+console.log(myFriends.includes("a"));
+
+// Exercise - Find Lola
+
+function findFriend() {
+    for (let i = 0; i < myFriends.length; i++) {
+        //if function inside for loop
+        if (myFriends[i].includes('Lola')) {
+            console.log("Found Lola")
+
+        }
+    }
+}
+
+const findLola = findFriend('Lola');
+
+// Function getCircleArea
+
+let radius = 3;
+const areaOfCircle = Math.PI * radius ** 2;
+// when radius =3, area of circle is 28.27
+
+function getCircleArea(radius) {
+    console.log((Math.PI * radius ** 2).toFixed(2));
+    return (Math.PI * radius ** 2).toFixed(2);
+    //toFixed(2) - To roundup decimal number to 2 places.
+}
+
+getCircleArea(3); //28.27
+getCircleArea(5); //78.54
+
+// Calculate Celcius to Fahrenheit
+
+let temperatureInCelcius = 30;
+/*To convert temperatures in degrees Celsius to Fahrenheit, 
+multiply by 1.8 (or 9/5) and add 32.
+*/
+
+let celciusToFahreneit = temperatureInCelcius * 1.8 + 32;
+console.log(celciusToFahreneit);
+
+function calculateCelciusToFahreneit(temperatureInCelcius) {
+    console.log(temperatureInCelcius * 1.8 + 32)
+    return temperatureInCelcius * 1.8 + 32;
+}
+
+calculateCelciusToFahreneit(30);
+calculateCelciusToFahreneit(20);
+
+
