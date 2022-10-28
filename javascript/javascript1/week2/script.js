@@ -126,3 +126,50 @@ function getWhatToWear(goingToRainToday, temperature) {
         }
     }
 }
+
+// Student Manager
+const class07Students = [];
+
+function addStudentToClass(studentName) {
+    let numberOfStudents = class07Students.length;
+
+    function getNumberOfStudents() {
+        return numberOfStudents;
+    }
+
+    // Call the getNumberOfStudents to log out the number of students.
+    console.log(getNumberOfStudents());
+
+    if (class07Students.includes(studentName)) {
+        console.log(`Student ${studentName} is already in the class`);
+    } else if (((numberOfStudents < 6) && (studentName != "")) || (studentName.includes("Queen"))) {
+        class07Students.push(studentName)
+    } else {
+        if ((studentName === "")) {
+            console.log("Please type the name of the student correctly")
+        } else {
+            console.log("Cannot add more students to class-07")
+        }
+    }
+}
+
+// Adding students to the array class07students
+addStudentToClass("Margrethe"); // Student1
+addStudentToClass("Shobhana");  // Student2
+addStudentToClass("");  // Student - Empty sting not added to array
+addStudentToClass("Madhu"); // Student3
+addStudentToClass("Claudia");  // Student4
+addStudentToClass("Mehmet");  // Student5
+addStudentToClass("Alex");  // Student6
+
+addStudentToClass("Peter");
+// Cannot add more students to class-07
+
+// Student with same name
+addStudentToClass("Shobhana");
+//'Student Shobhana is already in the class'
+
+addStudentToClass("Queen Margrethe")
+//Added Queen Margrethe to the class, even if number of students in class is already 6
+
+console.log(class07Students);
