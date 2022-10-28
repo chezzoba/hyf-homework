@@ -1,0 +1,10 @@
+body{
+    background-color: skyblue;
+}
+
+.container-body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
