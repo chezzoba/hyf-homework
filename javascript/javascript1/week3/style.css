@@ -4,3 +4,10 @@ body {
     /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom right, yellow, palegreen);
 }
+
+.container-body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
