@@ -1,0 +1,6 @@
+body {
+    height: 220px;
+    background-color: red;
+    /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, yellow, palegreen);
+}
