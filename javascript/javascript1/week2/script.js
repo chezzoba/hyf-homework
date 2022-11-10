@@ -63,7 +63,7 @@ const days = [
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
+    "Saturday"
 ];
 
 const todaysDayIndex = todaysDate.getDay();
