@@ -24,6 +24,19 @@ function shortestDanishWord(danishWords) {
         }
     }
 };
+
+function shortestDanishWordOneLoop(danishWords) {
+    let shortestWord = danishWords[0];
+
+    // Loop through the array to get shortest word
+    for (const word of danishWords)
+        if (word.length < shortestWord.length)
+            shortestWord = word;
+    
+    return shortestWord;
+    
+};
+
 console.log(shortestWord);
 
 // 1.2. Find and count the Danish letters
